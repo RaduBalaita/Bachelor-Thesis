@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectare Spam în Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .input-container, .result-container {
+            width: 80%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-container input, .input-container button {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .input-container button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        .input-container button:hover {
+            background-color: #0056b3;
+        }
+        .result-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .email {
+            width: 100%;
+            background-color: #eee;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .email span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detectare Spam în Email</h1>
+    <div class="input-container">
+        <form action="/detect_email_spam" method="POST">
+            <input type="email" name="email" placeholder="Introduceți adresa de email" required>
+            <input type="password" name="password" placeholder="Introduceți parola" required>
+            <button type="submit">Verifică Emailurile</button>
+        </form>
+    </div>
+    {% if emails %}
+    <div class="result-container">
+        <h2>Rezultatele Clasificării</h2>
+        {% for email in emails %}
+        <div class="email">
+            <p><span>Subiect:</span> {{ email.subject }}</p>
+            <p><span>Clasificare:</span> {{ email.classification }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <a href="/">Înapoi la Pagina Principală</a>
+</body>
+</html>

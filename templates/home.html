@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicație Detectare Spam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            display: inline-block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicație de Clasificare Spam</h1>
+        <p>Selectați o opțiune:</p>
+        <a href="/detect_text_spam">Clasificare Spam Manual</a>
+        <a href="/detect_email_spam">Clasificare Spam Automatic</a>
+    </div>
+</body>
+</html>
