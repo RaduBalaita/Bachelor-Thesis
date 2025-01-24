@@ -113,8 +113,8 @@ The model performance is evaluated using various metrics and visualizations, dem
 
 1.  **Clone the repository:**
     ```bash
-    git clone [repository-url]
-    cd [repository-directory]
+    git clone https://github.com/RaduBalaita/Bachelor-Thesis
+    cd Bachelor-Thesis
     ```
 
 2.  **Install required Python libraries:**
