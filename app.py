@@ -14,6 +14,9 @@ app = Flask(__name__)
 
 # Load the trained text spam detection model
 text_model = load_model("spam_detection_model_en.h5")
+text_model.compile(optimizer='rmsprop',
+                   loss='binary_crossentropy',
+                   metrics=['accuracy'])
 
 # Load the tokenizer for text spam detection
 with open("tokenizer_en.pkl", 'rb') as f:
