@@ -121,7 +121,6 @@ The model performance is evaluated using various metrics and visualizations, dem
     ```bash
     pip install -r requirements.txt
     ```
-    *(It's recommended to create a `requirements.txt` file listing project dependencies. If not, install manually: `pip install tensorflow flask scikit-learn nltk pandas matplotlib`)*
 
 3.  **Run the Flask web application:**
     ```bash
