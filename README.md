@@ -135,7 +135,9 @@ The model performance is evaluated using various metrics and visualizations, dem
     *   Run `python graph_gen.py` to generate updated evaluation graphs in the `RNN-Results/` directory.
 
 ### Alternately, you can use docker:
-
+```bash
+docker pull radubalaita/spam-detection-app
+```
 ---
 
 ## 📚 Key Learnings
